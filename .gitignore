@@ -1,0 +1,28 @@
+# .NET
+bin/
+obj/
+*.user
+.vs/
+backend/src/FleetPilot.Api/App_Data/
+backend/src/FleetPilot.Api/logs/
+appsettings.Production.json
+appsettings.*.local.json
+TestResults/
+
+# Flutter / Dart
+mobile/.dart_tool/
+mobile/build/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/ios/Pods/
+mobile/ios/.symlinks/
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/key.properties
+*.jks
+*.keystore
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
