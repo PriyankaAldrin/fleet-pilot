@@ -1,0 +1,213 @@
+{
+  "@@locale": "en",
+  "appTitle": "Fleet Pilot",
+  "signIn": "Sign in",
+  "signOut": "Sign out",
+  "email": "Email",
+  "password": "Password",
+  "required": "Required",
+  "invalidEmail": "Enter a valid email",
+  "retry": "Retry",
+  "cancel": "Cancel",
+  "save": "Save",
+  "delete": "Delete",
+  "edit": "Edit",
+  "add": "Add",
+  "search": "Search",
+  "confirm": "Confirm",
+  "yes": "Yes",
+  "no": "No",
+  "active": "Active",
+  "inactive": "Inactive",
+  "nothingHere": "Nothing here yet",
+  "settings": "Settings",
+  "language": "Language",
+  "changePassword": "Change password",
+  "currentPassword": "Current password",
+  "newPassword": "New password",
+  "passwordRule": "At least 8 characters with a letter and a number",
+  "passwordChanged": "Password changed. Please sign in again.",
+  "saved": "Saved",
+  "deleted": "Deleted",
+  "deleteConfirm": "Delete {name}? This cannot be undone from the app.",
+  "@deleteConfirm": {
+    "placeholders": {
+      "name": {}
+    }
+  },
+  "myShift": "My shift",
+  "noActiveShift": "You are not on a shift",
+  "startShift": "Start shift",
+  "endShift": "End shift",
+  "onShiftSince": "On shift since {time}",
+  "@onShiftSince": {
+    "placeholders": {
+      "time": {}
+    }
+  },
+  "startKmLabel": "Start km",
+  "endKmLabel": "End km",
+  "distance": "Distance",
+  "duration": "Duration",
+  "selectVehicle": "Select vehicle",
+  "noVehiclesAvailable": "No vehicles are available right now",
+  "lastOdometer": "Last odometer: {km}",
+  "@lastOdometer": {
+    "placeholders": {
+      "km": {}
+    }
+  },
+  "shiftHistory": "Shift history",
+  "offlineBanner": "You are offline. Shifts are saved on this phone and sent when you are back online.",
+  "pendingSync": "{count} change(s) waiting to sync",
+  "@pendingSync": {
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "syncFailed": "The server refused a saved shift: {message}",
+  "@syncFailed": {
+    "placeholders": {
+      "message": {}
+    }
+  },
+  "discard": "Discard",
+  "notSyncedYet": "Not synced yet",
+  "shiftStarted": "Shift started",
+  "shiftEnded": "Shift ended",
+  "lastShiftSummary": "Last shift: {km} km in {hours} h",
+  "@lastShiftSummary": {
+    "placeholders": {
+      "km": {},
+      "hours": {}
+    }
+  },
+  "flaggedForReview": "Flagged for admin review",
+  "odometerStartTitle": "Odometer at start",
+  "odometerEndTitle": "Odometer at end",
+  "takePhoto": "Take photo",
+  "retakePhoto": "Retake",
+  "photoHint": "Take a clear photo of the odometer. Avoid glare and keep the numbers in focus.",
+  "readingPhoto": "Reading the odometer…",
+  "kmReading": "Odometer (km)",
+  "checkReading": "Check the number matches the odometer, and correct it if needed.",
+  "noReadingFound": "Could not read the number. Type it in, or retake the photo.",
+  "lowConfidence": "The reading may be wrong. Please check it carefully.",
+  "editedWarning": "You changed the reading. An admin will review this shift.",
+  "kmTooLow": "Must be at least {km}",
+  "@kmTooLow": {
+    "placeholders": {
+      "km": {}
+    }
+  },
+  "kmInvalid": "Enter a whole number",
+  "bigJumpTitle": "Large distance",
+  "bigJumpMessage": "This shift would be {km} km. Is that correct?",
+  "@bigJumpMessage": {
+    "placeholders": {
+      "km": {}
+    }
+  },
+  "notesOptional": "Notes (optional)",
+  "cameraNeeded": "Camera permission is needed to photograph the odometer.",
+  "dashboard": "Dashboard",
+  "shifts": "Shifts",
+  "drivers": "Drivers",
+  "vehicles": "Vehicles",
+  "admins": "Admins",
+  "reports": "Reports",
+  "activeShiftsNow": "Active now",
+  "shiftsToday": "Shifts today",
+  "kmToday": "Km today",
+  "needsReview": "Needs review",
+  "activeDrivers": "Active drivers",
+  "activeVehicles": "Active vehicles",
+  "onTheRoad": "On the road",
+  "flaggedReadings": "Flagged readings",
+  "all": "All",
+  "flagged": "Flagged",
+  "completed": "Completed",
+  "shiftDetails": "Shift #{id}",
+  "@shiftDetails": {
+    "placeholders": {
+      "id": {}
+    }
+  },
+  "driver": "Driver",
+  "vehicle": "Vehicle",
+  "startPhoto": "Start photo",
+  "endPhoto": "End photo",
+  "confirmedValue": "Confirmed: {km}",
+  "@confirmedValue": {
+    "placeholders": {
+      "km": {}
+    }
+  },
+  "deviceRead": "Phone read: {value}",
+  "@deviceRead": {
+    "placeholders": {
+      "value": {}
+    }
+  },
+  "serverRead": "Server read: {value}",
+  "@serverRead": {
+    "placeholders": {
+      "value": {}
+    }
+  },
+  "notAvailable": "n/a",
+  "flagReasons": "Why it was flagged",
+  "review": "Review",
+  "reviewNotes": "Review notes",
+  "markReviewed": "Save review",
+  "reviewedOn": "Reviewed {time}",
+  "@reviewedOn": {
+    "placeholders": {
+      "time": {}
+    }
+  },
+  "endForDriver": "End shift for driver",
+  "recordedOffline": "Recorded offline",
+  "location": "Location",
+  "name": "Name",
+  "phone": "Phone",
+  "licenseNo": "Licence number",
+  "licenseExpiry": "Licence expiry",
+  "newDriver": "New driver",
+  "editDriver": "Edit driver",
+  "newAdmin": "New admin",
+  "editAdmin": "Edit admin",
+  "newVehicle": "New vehicle",
+  "editVehicle": "Edit vehicle",
+  "leaveBlankToKeep": "Leave blank to keep the current password",
+  "plateNo": "Plate number",
+  "make": "Make",
+  "model": "Model",
+  "year": "Year",
+  "color": "Colour",
+  "currentOdometer": "Current odometer (km)",
+  "inUse": "In use",
+  "you": "You",
+  "reportType": "Report",
+  "allDrivers": "All drivers",
+  "allVehicles": "All vehicles",
+  "oneDriver": "One driver",
+  "oneVehicle": "One vehicle",
+  "dateRange": "Dates",
+  "run": "Show report",
+  "exportPdf": "PDF",
+  "exportExcel": "Excel",
+  "exported": "Saved {file}",
+  "@exported": {
+    "placeholders": {
+      "file": {}
+    }
+  },
+  "totalShifts": "Shifts",
+  "totalHours": "Hours",
+  "totalKm": "Km",
+  "avgKmPerShift": "Avg km / shift",
+  "avgHoursPerShift": "Avg hours / shift",
+  "avgKmPerHour": "Avg km / hour",
+  "pickDriverOrVehicle": "Pick a driver or vehicle"
+}

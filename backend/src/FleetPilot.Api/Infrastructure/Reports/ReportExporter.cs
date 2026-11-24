@@ -46,8 +46,12 @@ public sealed class ReportExporter(IOptions<CompanyOptions> company) : IReportEx
                     });
                     t.Header(h =>
                     {
-                        foreach (var title in new[] { "Start", "End", counterpart, "Start km", "End km", "Km", "Hours", "Flag" })
-                            h.Cell().Element(HeaderCell).Text(title);
+                        var titles = new[] { "Start", "End", counterpart, "Start km", "End km", "Km", "Hours", "Flag" };
+                        for (var i = 0; i < titles.Length; i++)
+                        {
+                            var cell = h.Cell().Element(HeaderCell);
+                            (i is >= 3 and <= 6 ? cell.AlignRight() : i == 7 ? cell.AlignCenter() : cell).Text(titles[i]);
+                        }
                     });
                     foreach (var s in r.Shifts)
                     {
@@ -119,8 +123,12 @@ public sealed class ReportExporter(IOptions<CompanyOptions> company) : IReportEx
                 });
                 t.Header(h =>
                 {
-                    foreach (var title in new[] { r.Kind == "Drivers" ? "Driver" : "Vehicle", r.Kind == "Drivers" ? "Licence" : "Model", "Shifts", "Hours", "Km", "Avg km", "Avg hrs", "Flags" })
-                        h.Cell().Element(HeaderCell).Text(title);
+                    var titles = new[] { r.Kind == "Drivers" ? "Driver" : "Vehicle", r.Kind == "Drivers" ? "Licence" : "Model", "Shifts", "Hours", "Km", "Avg km", "Avg hrs", "Flags" };
+                    for (var i = 0; i < titles.Length; i++)
+                    {
+                        var cell = h.Cell().Element(HeaderCell);
+                        (i >= 2 ? cell.AlignRight() : cell).Text(titles[i]);
+                    }
                 });
                 foreach (var row in r.Rows)
                 {

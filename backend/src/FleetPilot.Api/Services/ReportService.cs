@@ -111,7 +111,8 @@ public sealed class ReportService(
             km,
             n == 0 ? 0 : Math.Round(hours / n, 2),
             n == 0 ? 0 : Math.Round((double)km / n, 1),
-            hours <= 0 ? 0 : Math.Round(km / hours, 1),
+            // Very short shifts (tests, mistakes) would give absurd speeds, so they count as zero.
+            hours < 0.1 ? 0 : Math.Round(km / hours, 1),
             rows.Count(r => r.IsFlagged));
     }
 
