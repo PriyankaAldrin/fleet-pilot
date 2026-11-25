@@ -6,6 +6,13 @@
 	<string>The camera is used to photograph the odometer at the start and end of each shift.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Odometer photos are taken with the camera; the photo library is not used.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Used to reach the Fleet Pilot server on your local network while testing.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your location is saved with each odometer photo so the company can confirm where the shift started and ended.</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>

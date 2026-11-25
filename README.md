@@ -40,6 +40,9 @@ in `OdometerParser.cs` and `odometer_parser.dart` and both have the same tests.
 
 ---
 
+> **Testing on a Mac and an iPhone?** Follow [docs/SETUP_MAC_IPHONE.md](docs/SETUP_MAC_IPHONE.md),
+> a step by step guide from installing the tools to testing every screen.
+
 ## 1. Set up the API
 
 ### Requirements
@@ -102,7 +105,7 @@ Health check: `GET /health`.
 ### Deploy
 
 Publish with `dotnet publish -c Release` and host on IIS, a Windows service, Linux + systemd, or a
-container. Serve it over **HTTPS** (release builds of the app refuse plain http). Make sure the
+container. Serve it over **HTTPS** in production: passwords, tokens and photos travel over it. Make sure the
 photo folder (`Storage:LocalPath`) is on persistent disk and backed up, or use Azure Blob.
 
 ### Tests
@@ -154,8 +157,8 @@ flutter build apk --release --dart-define=API_BASE_URL=https://fleet.yourcompany
 flutter build ipa --release --dart-define=API_BASE_URL=https://fleet.yourcompany.com
 ```
 
-Debug Android builds allow plain http so you can test against a local API. Release builds need
-https.
+Plain http to a computer on your local network is fine for testing. Use https for the real
+server.
 
 ### Tests
 
