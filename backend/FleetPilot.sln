@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{48E37F94-8F40-430C-970F-1F7122BD167B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FleetPilot.Api", "src\FleetPilot.Api\FleetPilot.Api.csproj", "{564D6BA3-2B78-4919-902D-93CAE4EBD238}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{93466FFE-3574-47F0-9EB7-8867D35FC99F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FleetPilot.Api.Tests", "tests\FleetPilot.Api.Tests\FleetPilot.Api.Tests.csproj", "{CAC7A1DA-53D1-43DC-9E69-1256A5E67893}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{564D6BA3-2B78-4919-902D-93CAE4EBD238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564D6BA3-2B78-4919-902D-93CAE4EBD238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564D6BA3-2B78-4919-902D-93CAE4EBD238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564D6BA3-2B78-4919-902D-93CAE4EBD238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAC7A1DA-53D1-43DC-9E69-1256A5E67893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC7A1DA-53D1-43DC-9E69-1256A5E67893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC7A1DA-53D1-43DC-9E69-1256A5E67893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC7A1DA-53D1-43DC-9E69-1256A5E67893}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{564D6BA3-2B78-4919-902D-93CAE4EBD238} = {48E37F94-8F40-430C-970F-1F7122BD167B}
+		{CAC7A1DA-53D1-43DC-9E69-1256A5E67893} = {93466FFE-3574-47F0-9EB7-8867D35FC99F}
+	EndGlobalSection
+EndGlobal
