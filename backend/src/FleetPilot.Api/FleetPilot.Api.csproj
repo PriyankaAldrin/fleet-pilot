@@ -24,4 +24,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <!-- Keep development settings and the template out of the published files. -->
+    <Content Update="appsettings.Development.json;appsettings.Production.example.json" CopyToPublishDirectory="Never" />
+  </ItemGroup>
+
 </Project>

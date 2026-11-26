@@ -42,6 +42,8 @@ in `OdometerParser.cs` and `odometer_parser.dart` and both have the same tests.
 
 > **Testing on a Mac and an iPhone?** Follow [docs/SETUP_MAC_IPHONE.md](docs/SETUP_MAC_IPHONE.md),
 > a step by step guide from installing the tools to testing every screen.
+>
+> **Hosting on IIS with Azure SQL?** See [docs/DEPLOY_IIS_AZURE_SQL.md](docs/DEPLOY_IIS_AZURE_SQL.md).
 
 ## 1. Set up the API
 
@@ -105,7 +107,10 @@ Health check: `GET /health`.
 ### Deploy
 
 Publish with `dotnet publish -c Release` and host on IIS, a Windows service, Linux + systemd, or a
-container. Serve it over **HTTPS** in production: passwords, tokens and photos travel over it. Make sure the
+container. For IIS with Azure SQL there is a step by step guide in
+[docs/DEPLOY_IIS_AZURE_SQL.md](docs/DEPLOY_IIS_AZURE_SQL.md), a ready `web.config`, a settings
+template (`appsettings.Production.example.json`) and a SQL script (`backend/database/FleetPilot.sql`)
+for DBAs who prefer to create the tables themselves. Serve it over **HTTPS** in production: passwords, tokens and photos travel over it. Make sure the
 photo folder (`Storage:LocalPath`) is on persistent disk and backed up, or use Azure Blob.
 
 ### Tests
@@ -115,7 +120,7 @@ cd backend
 dotnet test
 ```
 
-56 tests: odometer parsing, flag rules, shift rules (one active shift, end ≥ start, idempotent
+59 tests: odometer parsing, flag rules, shift rules (one active shift, end ≥ start, idempotent
 offline sync, offline timestamps), admin rules (no self delete, last admin, soft delete, audit
 log without password hashes), auth (refresh rotation and reuse detection), reports (time zone,
 totals, PDF/Excel), and an HTTP test of the whole driver day through the real pipeline.

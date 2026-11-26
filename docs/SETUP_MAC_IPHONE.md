@@ -16,6 +16,12 @@ The Mac and the iPhone must be on the **same Wi-Fi network**. Office guest netwo
 devices from reaching each other, so use a home or office network you control, or a personal
 hotspot.
 
+> **Is your database on Azure SQL, reachable only from your IIS server?** Then the API runs on
+> that server instead of your Mac. Follow [DEPLOY_IIS_AZURE_SQL.md](DEPLOY_IIS_AZURE_SQL.md) for the
+> server. From this guide you then only need sections **1, 2, 6, 7 and 8**, using the server's
+> address in section 7. To try everything on the Mac first, without touching Azure, use option
+> **3B** below.
+
 ---
 
 ## Contents
@@ -136,6 +142,8 @@ From here on, **`~/fleet-pilot`** is the project folder.
 ## 3. Prepare SQL Server
 
 Choose **A** to use your own SQL Server, or **B** for a throwaway test database on the Mac.
+If your SQL Server is on Azure and only your IIS server can reach it, use **B** to test on the Mac, or
+skip to [DEPLOY_IIS_AZURE_SQL.md](DEPLOY_IIS_AZURE_SQL.md).
 
 ### A. Your own SQL Server
 
@@ -538,7 +546,7 @@ Choosing a vehicle needs the server, so start the shift while you're online.
 Run these from the Mac. They don't need the iPhone or your SQL Server.
 
 ```bash
-# API: 56 tests, uses an in-memory SQLite database
+# API: 59 tests, uses an in-memory SQLite database
 cd ~/fleet-pilot/backend
 dotnet test
 
@@ -548,7 +556,7 @@ flutter analyze
 flutter test
 ```
 
-Expected: `Passed! - Failed: 0, Passed: 56` for the API, then `No issues found!` and
+Expected: `Passed! - Failed: 0, Passed: 59` for the API, then `No issues found!` and
 `All tests passed!` for the app.
 
 ---

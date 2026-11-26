@@ -6,7 +6,27 @@ namespace FleetPilot.Api.Common;
 /// <summary>Converts between the company's local calendar days and UTC instants.</summary>
 public sealed class CompanyTime(IOptions<CompanyOptions> options, IClock clock)
 {
-    private readonly TimeZoneInfo _zone = TimeZoneInfo.FindSystemTimeZoneById(options.Value.TimeZone);
+    private readonly TimeZoneInfo _zone = Resolve(options.Value.TimeZone);
+
+    /// <summary>
+    /// Accepts IANA ids ("Asia/Dubai") and Windows ids ("Arabian Standard Time") on any OS.
+    /// Older Windows servers without ICU only know Windows ids, so IANA ids are converted there.
+    /// </summary>
+    public static TimeZoneInfo Resolve(string id)
+    {
+        try
+        {
+            return TimeZoneInfo.FindSystemTimeZoneById(id);
+        }
+        catch (TimeZoneNotFoundException)
+        {
+            if (TimeZoneInfo.TryConvertIanaIdToWindowsId(id, out var windowsId))
+                return TimeZoneInfo.FindSystemTimeZoneById(windowsId);
+            if (TimeZoneInfo.TryConvertWindowsIdToIanaId(id, out var ianaId))
+                return TimeZoneInfo.FindSystemTimeZoneById(ianaId);
+            throw new InvalidOperationException($"Company:TimeZone '{id}' is not a known time zone.");
+        }
+    }
 
     public TimeZoneInfo Zone => _zone;
 
